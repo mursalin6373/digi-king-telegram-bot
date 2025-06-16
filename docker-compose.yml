@@ -1,0 +1,58 @@
+version: '3.8'
+
+services:
+  digi-king-bot:
+    build: .
+    container_name: digi-king-bot
+    restart: unless-stopped
+    environment:
+      - NODE_ENV=production
+    env_file:
+      - .env
+    ports:
+      - "3000:3000"
+    depends_on:
+      - mongodb
+    volumes:
+      - ./logs:/app/logs
+    networks:
+      - digi-king-network
+
+  mongodb:
+    image: mongo:5.0
+    container_name: digi-king-mongodb
+    restart: unless-stopped
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=admin
+      - MONGO_INITDB_ROOT_PASSWORD=secure_password_here
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+      - ./scripts/mongo-init.js:/docker-entrypoint-initdb.d/mongo-init.js:ro
+    networks:
+      - digi-king-network
+
+  nginx:
+    image: nginx:alpine
+    container_name: digi-king-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - ./nginx.conf:/etc/nginx/nginx.conf:ro
+      - ./ssl:/etc/nginx/ssl:ro
+    depends_on:
+      - digi-king-bot
+    networks:
+      - digi-king-network
+
+volumes:
+  mongodb_data:
+    driver: local
+
+networks:
+  digi-king-network:
+    driver: bridge
+

@@ -1,0 +1,38 @@
+{
+  "campaigns": [
+    {
+      "name": "welcome_message_test",
+      "variants": [
+        {
+          "id": "A",
+          "message": "Welcome to Digi-King! 🎉 Get exclusive deals!"
+        },
+        {
+          "id": "B",
+          "message": "Join Digi-King for amazing digital products! 🚀"
+        }
+      ],
+      "traffic_split": 50,
+      "active": true
+    },
+    {
+      "name": "discount_offer_test",
+      "variants": [
+        {
+          "id": "A",
+          "discount": 10,
+          "message": "Get 10% off your first purchase!"
+        },
+        {
+          "id": "B",
+          "discount": 15,
+          "message": "Special 15% discount just for you!"
+        }
+      ],
+      "traffic_split": 50,
+      "active": true
+    }
+  ],
+  "weekly_rotation": true,
+  "auto_optimize": true
+}

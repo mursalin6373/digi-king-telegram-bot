@@ -1,0 +1,155 @@
+# Digi-King Telegram Bot - Git Ignore Configuration
+
+# Environment variables and secrets
+.env
+.env.local
+.env.production
+.env.staging
+*.key
+*.pem
+*.p12
+
+# Node.js dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# Runtime files
+*.pid
+*.seed
+*.pid.lock
+
+# Logs
+logs
+*.log
+bot.log
+monitor.log
+dashboard.log
+ab-test.log
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Coverage directory used by tools like istanbul
+coverage/
+
+# nyc test coverage
+.nyc_output
+
+# Grunt intermediate storage
+.grunt
+
+# Bower dependency directory
+bower_components
+
+# node-waf configuration
+.lock-wscript
+
+# Compiled binary addons
+build/Release
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+
+# Optional REPL history
+.node_repl_history
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+.env.test
+
+# parcel-bundler cache
+.cache
+.parcel-cache
+
+# next.js build output
+.next
+
+# nuxt.js build output
+.nuxt
+
+# vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# Database files
+*.db
+*.sqlite
+*.sqlite3
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.temp
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Deployment files
+dist/
+build/
+
+# Status and monitoring files
+deployment-status.json
+
+# Backup files
+*.bak
+*.backup
+
+# Test files (keep test structure but ignore test data)
+test-data/
+*.test.local
+
+# Local development overrides
+local.json
+config.local.js
+
+# SSL certificates (if any)
+*.crt
+*.cert
+*.ca-bundle
+
+# Docker files that might contain secrets
+docker-compose.override.yml
+
+# PM2 ecosystem file (might contain sensitive data)
+ecosystem.config.js
+
