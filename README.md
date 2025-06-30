@@ -1,394 +1,110 @@
-# 🚀 Digi-King Telegram Bot
+# Digi-King Telegram Bot 🚀
 
-[![GitHub Stars](https://img.shields.io/github/stars/darklink2151/digi-king-telegram-bot?style=for-the-badge&logo=github)](https://github.com/darklink2151/digi-king-telegram-bot/stargazers)
-[![GitHub Forks](https://img.shields.io/github/forks/darklink2151/digi-king-telegram-bot?style=for-the-badge&logo=github)](https://github.com/darklink2151/digi-king-telegram-bot/network/members)
-[![GitHub Issues](https://img.shields.io/github/issues/darklink2151/digi-king-telegram-bot?style=for-the-badge&logo=github)](https://github.com/darklink2151/digi-king-telegram-bot/issues)
-[![Node.js Version](https://img.shields.io/badge/node.js-18.x-green?style=for-the-badge&logo=node.js)](https://nodejs.org/)
-[![MongoDB](https://img.shields.io/badge/MongoDB-4.4+-green?style=for-the-badge&logo=mongodb)](https://www.mongodb.com/)
+![Digi-King Telegram Bot](https://img.shields.io/badge/version-1.0.0-brightgreen.svg) ![GitHub Releases](https://img.shields.io/badge/releases-latest-blue.svg)
 
-<div align="center">
-  <img src="https://img.shields.io/badge/Status-Production%20Ready-brightgreen?style=for-the-badge" alt="Production Ready">
-  <img src="https://img.shields.io/badge/Value-$10,000+-gold?style=for-the-badge" alt="Enterprise Value">
-  <img src="https://img.shields.io/badge/Launch%20Time-5%20Minutes-blue?style=for-the-badge" alt="Quick Launch">
-</div>
+Welcome to the **Digi-King Telegram Bot** repository! This project is a complete multi-channel marketing automation system designed for businesses looking to enhance their marketing strategies. The bot integrates seamlessly with Telegram, providing a powerful tool for managing affiliate programs, email automation, social media management, and real-time analytics.
 
----
+## Table of Contents
 
-## 🎆 **Complete Multi-Channel Marketing Automation System**
-
-A comprehensive, enterprise-grade Telegram bot for the "digi-king" brand that provides complete marketing automation including email subscriptions, affiliate programs, referral systems, social media management, real-time analytics, A/B testing, and GDPR compliance.
-
-**💰 Enterprise Value:** $10,000+ development cost  
-**⏱️ Quick Launch:** Ready in 5 minutes  
-**🌐 Multi-Channel:** Telegram + Email + Social Media  
-**📊 Analytics:** Real-time dashboard with KPIs  
-**🛡️ Compliant:** GDPR/CCPA ready
+1. [Features](#features)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [Technologies Used](#technologies-used)
+5. [Contributing](#contributing)
+6. [License](#license)
+7. [Contact](#contact)
+8. [Releases](#releases)
 
 ## Features
 
-### 🔐 User Management
-- **Email Collection & Validation**: Robust email validation with typo suggestions
-- **GDPR Compliance**: Privacy consent management and opt-in/opt-out functionality
-- **User Segmentation**: Automatic user categorization (new_customer, returning_customer, vip, inactive)
-- **Preference Management**: Granular notification preferences
+The Digi-King Telegram Bot offers a range of features that make it a robust solution for marketing automation:
 
-### 📧 Email Subscriptions
-- **Subscription Flow**: Guided subscription process with consent management
-- **Email Validation**: Advanced email validation including disposable email detection
-- **Unsubscribe Management**: Easy unsubscribe with retention attempts
-- **Privacy Compliance**: GDPR-compliant consent collection
-
-### 🎯 Campaign Management
-- **Automated Campaigns**: Welcome campaigns, product announcements, promotions
-- **Segmented Targeting**: Target specific user segments
-- **Scheduled Messaging**: Schedule campaigns for optimal timing
-- **Recurring Campaigns**: Set up daily, weekly, or monthly recurring messages
-- **A/B Testing Ready**: Campaign analytics for optimization
-
-### 💳 Discount Code System
-- **Dynamic Generation**: Personalized discount codes based on user segments
-- **Expiry Management**: Automatic code expiration and cleanup
-- **Usage Tracking**: Track code redemption and conversion rates
-- **Segment-based Codes**: Different discount levels for different user types
-
-### 📊 Analytics & Reporting
-- **User Engagement**: Track interactions, clicks, and conversions
-- **Campaign Performance**: Open rates, click rates, conversion tracking
-- **Revenue Attribution**: Track revenue generated from campaigns
-- **Admin Dashboard**: Comprehensive admin panel for management
-
-### 🛠 Admin Features
-- **Admin Panel**: Full-featured admin interface
-- **Broadcasting**: Send messages to all subscribers or specific segments
-- **User Management**: Search, export, and manage users
-- **Analytics Dashboard**: Real-time statistics and reports
-- **Campaign Creation**: Create and schedule campaigns
-
-### 🔗 Commerce Integration
-- **Webhook Support**: Integrate with e-commerce platforms
-- **Order Tracking**: Track purchases and update user segments
-- **Product Announcements**: Automatic new product notifications
-- **Purchase Analytics**: Revenue and conversion tracking
-
-## Tech Stack
-
-- **Node.js** - Runtime environment
-- **Telegraf** - Telegram Bot API framework
-- **MongoDB** - Database for user data and analytics
-- **Express.js** - Web server for webhooks
-- **node-cron** - Campaign scheduling
-- **Mongoose** - MongoDB ODM
-- **Validator** - Email validation
-- **Rate Limiting** - API protection
+- **Affiliate Programs**: Manage and track your affiliate marketing efforts with ease.
+- **Email Automation**: Automate your email campaigns to reach your audience effectively.
+- **Social Media Management**: Schedule and manage posts across various platforms.
+- **Real-Time Analytics**: Gain insights into your marketing performance with real-time data.
+- **A/B Testing**: Test different marketing strategies to find what works best.
+- **GDPR Compliance**: Ensure that your marketing practices comply with GDPR regulations.
 
 ## Installation
 
-### Prerequisites
+To get started with the Digi-King Telegram Bot, follow these steps:
 
-- Node.js 16+ 
-- MongoDB 4.4+
-- Telegram Bot Token (from @BotFather)
-
-### Setup
-
-1. **Clone the repository**
+1. **Clone the Repository**:
    ```bash
-   git clone <repository-url>
+   git clone https://github.com/mursalin6373/digi-king-telegram-bot.git
+   ```
+
+2. **Navigate to the Project Directory**:
+   ```bash
    cd digi-king-telegram-bot
    ```
 
-2. **Install dependencies**
+3. **Install Dependencies**:
    ```bash
    npm install
    ```
 
-3. **Environment Configuration**
-   ```bash
-   cp .env.example .env
-   ```
-   
-   Edit `.env` with your configuration:
-   ```env
-   # Telegram Bot Configuration
-   TELEGRAM_BOT_TOKEN=your_bot_token_from_botfather
-   TELEGRAM_WEBHOOK_URL=https://your-domain.com/bot-webhook
-   
-   # Database
-   MONGODB_URI=mongodb://localhost:27017/digi-king-bot
-   
-   # Security
-   JWT_SECRET=your_secret_key_here
-   ADMIN_PASSWORD=your_admin_password
-   ENCRYPTION_KEY=your_32_character_key_here
-   
-   # Admin Users (Telegram User IDs)
-   ADMIN_USER_IDS=123456789,987654321
-   
-   # Commerce Integration
-   COMMERCE_API_URL=https://your-ecommerce-platform.com/api
-   COMMERCE_API_KEY=your_api_key
-   ```
+4. **Configure Environment Variables**:
+   Create a `.env` file in the root directory and add your configuration settings. Refer to the `.env.example` file for guidance.
 
-4. **Start MongoDB**
+5. **Run the Bot**:
    ```bash
-   # Using Docker
-   docker run -d -p 27017:27017 --name mongodb mongo:latest
-   
-   # Or start your local MongoDB service
-   mongod
-   ```
-
-5. **Run the Bot**
-   ```bash
-   # Development mode
-   npm run dev
-   
-   # Production mode
    npm start
    ```
 
-## Configuration
-
-### Telegram Bot Setup
-
-1. Create a bot with @BotFather on Telegram
-2. Get your bot token
-3. Set bot commands (optional):
-   ```
-   start - Welcome message and main menu
-   subscribe - Subscribe to newsletter
-   unsubscribe - Unsubscribe from newsletter
-   profile - View your profile
-   discount - Get personalized discount
-   preferences - Manage notification preferences
-   help - Show help message
-   admin - Admin panel (admin only)
-   ```
-
-### Admin Setup
-
-1. Get your Telegram User ID (use @userinfobot)
-2. Add your User ID to `ADMIN_USER_IDS` in `.env`
-3. Use `/admin` command to access admin features
-
-### Commerce Platform Integration
-
-The bot supports webhook integration with e-commerce platforms. Set up webhooks for:
-
-- `order.completed` - When an order is completed
-- `discount.used` - When a discount code is used
-- `product.created` - When a new product is added
-
-Webhook endpoint: `POST /webhook/commerce`
-
-Example webhook payload:
-```json
-{
-  "event": "order.completed",
-  "order": {
-    "id": "order_123",
-    "total": 99.99,
-    "customer": {
-      "email": "customer@example.com"
-    }
-  }
-}
-```
-
 ## Usage
 
-### User Commands
+After installation, you can interact with the bot directly through Telegram. Simply search for the bot using its username and start a chat. You can access various commands that trigger different functionalities, such as:
 
-- `/start` - Welcome message and main menu
-- `/subscribe` - Subscribe to newsletter
-- `/unsubscribe` - Unsubscribe from newsletter
-- `/profile` - View user profile and statistics
-- `/discount` - Get personalized discount code
-- `/preferences` - Manage notification preferences
-- `/help` - Show help and available commands
+- `/start`: Begin interacting with the bot.
+- `/affiliate`: Get information about your affiliate program.
+- `/email`: Manage your email campaigns.
+- `/analytics`: View real-time analytics.
+- `/social`: Schedule social media posts.
 
-### Admin Commands
+## Technologies Used
 
-- `/admin` - Open admin panel
-- Admin panel provides access to:
-  - Analytics dashboard
-  - Campaign management
-  - User management
-  - Broadcast messaging
-  - Discount code management
+The Digi-King Telegram Bot is built using a variety of technologies:
 
-### Subscription Flow
-
-1. User starts with `/start` or clicks "Subscribe"
-2. Bot shows privacy policy and asks for consent
-3. User gives consent
-4. Bot asks for email address
-5. Email is validated (with typo suggestions)
-6. User is subscribed and receives welcome message
-7. Welcome campaign with discount code is scheduled
-
-## API Endpoints
-
-- `GET /health` - Health check endpoint
-- `POST /webhook/commerce` - Commerce platform webhooks
-- `POST /bot-webhook` - Telegram bot webhook (production)
-
-## Database Schema
-
-### Users Collection
-- User profile information
-- Subscription status and preferences
-- Purchase history and segments
-- Consent and privacy settings
-
-### Campaigns Collection
-- Campaign metadata and content
-- Targeting and scheduling information
-- Analytics and performance data
-- Discount code information
-
-### Analytics Collection
-- User interaction events
-- Campaign performance metrics
-- Revenue and conversion tracking
-- Button clicks and engagement data
-
-## Features in Detail
-
-### Email Validation
-- Format validation using industry standards
-- Disposable email detection
-- Typo detection and suggestions
-- MX record validation (optional)
-- Integration with external validation APIs
-
-### User Segmentation
-- **New Customer**: No previous purchases
-- **Returning Customer**: Has made purchases
-- **VIP**: High-value customers (>$1000 spent)
-- **Inactive**: No interaction in 30+ days
-
-Segments are automatically updated based on user behavior.
-
-### Discount Code Generation
-- Personalized codes based on user segments
-- Configurable expiry dates
-- Usage limits and tracking
-- Anti-fraud measures
-- Bulk code generation for campaigns
-
-### Campaign Scheduling
-- One-time campaigns
-- Recurring campaigns (daily/weekly/monthly)
-- Time zone support
-- Automatic cleanup of old campaigns
-- Failed delivery handling
-
-### Analytics Tracking
-- Message delivery status
-- Button click tracking
-- Conversion tracking
-- Revenue attribution
-- User engagement metrics
-
-## Security Features
-
-- Rate limiting on all endpoints
-- Input validation and sanitization
-- Admin authentication
-- Secure environment variable handling
-- CORS protection
-- Helmet.js security headers
-
-## Monitoring
-
-- Health check endpoint for uptime monitoring
-- Detailed logging for debugging
-- Error tracking and reporting
-- Performance metrics collection
-
-## Deployment
-
-### Docker Deployment
-
-```dockerfile
-FROM node:16-alpine
-WORKDIR /app
-COPY package*.json ./
-RUN npm ci --only=production
-COPY . .
-EXPOSE 3000
-CMD ["npm", "start"]
-```
-
-### Environment Variables for Production
-
-```env
-NODE_ENV=production
-TELEGRAM_WEBHOOK_URL=https://your-domain.com/bot-webhook
-MONGODB_URI=mongodb://your-mongodb-cluster/digi-king-bot
-```
-
-### Process Management
-
-Use PM2 for production deployment:
-
-```bash
-npm install -g pm2
-pm2 start src/index.js --name "digi-king-bot"
-pm2 startup
-pm2 save
-```
-
-## Development
-
-### Running Tests
-
-```bash
-npm test
-```
-
-### Linting
-
-```bash
-npm run lint
-```
-
-### Development Mode
-
-```bash
-npm run dev
-```
-
-This starts the bot with nodemon for auto-reloading during development.
+- **Node.js**: The core framework for building the bot.
+- **MongoDB**: Used for storing user data and marketing metrics.
+- **Telegram Bot API**: The interface that allows the bot to interact with users.
+- **Express.js**: A web framework for building the server-side logic.
+- **dotenv**: For managing environment variables.
+- **Mongoose**: An ODM for MongoDB, simplifying database interactions.
 
 ## Contributing
 
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Add tests for new functionality
-5. Submit a pull request
+We welcome contributions to improve the Digi-King Telegram Bot. To contribute:
+
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push to your forked repository.
+5. Create a pull request.
+
+Please ensure that your code adheres to our coding standards and includes appropriate tests.
 
 ## License
 
-MIT License - see LICENSE file for details
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-## Support
+## Contact
 
-For support and questions:
-- Email: support@digi-king.com
-- Create an issue on GitHub
-- Check the documentation in the `/docs` folder
+For questions or suggestions, feel free to reach out:
 
-## Roadmap
+- **Author**: Mursalin
+- **Email**: mursalin@example.com
 
-- [ ] Multi-language support
-- [ ] Advanced A/B testing
-- [ ] Integration with more e-commerce platforms
-- [ ] Enhanced analytics dashboard
-- [ ] Machine learning for user segmentation
-- [ ] SMS integration
-- [ ] Advanced campaign templates
-- [ ] API for third-party integrations
+## Releases
 
+To download the latest release of the Digi-King Telegram Bot, visit the [Releases section](https://github.com/mursalin6373/digi-king-telegram-bot/releases). You can find all the necessary files there to execute the bot.
+
+For updates and new features, keep an eye on the Releases section. 
+
+## Conclusion
+
+The Digi-King Telegram Bot stands as a powerful tool for businesses aiming to streamline their marketing efforts. With features that cover all aspects of multi-channel marketing, this bot can help you achieve your goals effectively. 
+
+Feel free to explore the repository, test the bot, and contribute to its growth. Thank you for your interest in the Digi-King Telegram Bot!
